@@ -6,6 +6,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
     public class GoodLifeFulfilmentCertificatePrepareV1Request : DouyinOpenRequest
     {
         /// <summary>
+        /// 获取或设置门店 ID。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("poi_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
+        public string? POIId { get; set; }
+
+        /// <summary>
         /// 获取或设置加密券码解析数据。与字段 <see cref="Code"/> 二选一。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
