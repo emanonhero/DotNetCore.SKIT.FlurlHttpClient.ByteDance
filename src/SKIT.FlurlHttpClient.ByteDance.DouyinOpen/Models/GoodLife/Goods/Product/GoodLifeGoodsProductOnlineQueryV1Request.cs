@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public int? PageCursor { get; set; }
+        public string? PageCursor { get; set; }
 
         /// <summary>
         /// 获取或设置分页每页数量。
