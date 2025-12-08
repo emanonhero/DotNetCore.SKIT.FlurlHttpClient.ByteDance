@@ -255,12 +255,26 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         [System.Text.Json.Serialization.JsonPropertyName("code")]
                         public string Code { get; set; } = default!;
 
+                        ///// <summary>
+                        ///// 获取或设置金额信息。
+                        ///// </summary>
+                        //[Newtonsoft.Json.JsonProperty("amount")]
+                        //[System.Text.Json.Serialization.JsonPropertyName("amount")]
+                        //public Types.Amount Amount { get; set; } = default!;
+
                         /// <summary>
-                        /// 获取或设置金额信息。
+                        /// 获取或设置分账单金额信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("amount")]
                         [System.Text.Json.Serialization.JsonPropertyName("amount")]
-                        public Types.Amount Amount { get; set; } = default!;
+                        public Types.Amount.Types.SettleAmount SettleAmount { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置分账款项金额信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("fund_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("fund_amount")]
+                        public Types.Amount.Types.FundAmount FundAmount { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置是否是商场模式。
