@@ -39,5 +39,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         [Newtonsoft.Json.JsonProperty("stock_qty")]
         [System.Text.Json.Serialization.JsonPropertyName("stock_qty")]
         public int? StockQuantity { get; set; }
+
+
+        /// <summary>
+        /// 实际支付价格，仅单sku商品可填写
+        ///actual_amount（ 实际支付价格） 必须小于 origin_amount（原价）。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("actual_amount")]
+        [System.Text.Json.Serialization.JsonPropertyName("actual_amount")]
+        public long? ActualAmount { get; set; }
     }
 }
