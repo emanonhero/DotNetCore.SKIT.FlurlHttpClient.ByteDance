@@ -588,6 +588,30 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsProductOnlineGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
+
+
+        /// <summary>
+        /// <para>异步调用 [POST] goods/open/common/product/poi/operate 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/local-life/develop/OpenAPI/general-capabilities/goods/goods-poi-operate ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.GoodLifeGoodsProductPoiOperateV1Response> ExecuteGoodLifeGoodsOpenCommonProductPoiOperateV1Async(this DouyinOpenClient client, Models.GoodLifeGoodsProductPoiOperateV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "goods","open","common","product","poi","operate")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsProductPoiOperateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
         #endregion
 
         #region Goods/SKU

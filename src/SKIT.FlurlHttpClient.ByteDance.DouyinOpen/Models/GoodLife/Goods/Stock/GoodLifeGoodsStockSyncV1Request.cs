@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("stock_qty")]
                 [System.Text.Json.Serialization.JsonPropertyName("stock_qty")]
-                public int? TotalStock { get; set; }
+                public long? TotalStock { get; set; }
 
                 /// <summary>
                 /// 获取或设置可用库存。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("avail_qty")]
                 [System.Text.Json.Serialization.JsonPropertyName("avail_qty")]
-                public int? AvailableStock { get; set; }
+                public long? AvailableStock { get; set; }
 
                 /// <summary>
                 /// 获取或设置库存上限类型。
