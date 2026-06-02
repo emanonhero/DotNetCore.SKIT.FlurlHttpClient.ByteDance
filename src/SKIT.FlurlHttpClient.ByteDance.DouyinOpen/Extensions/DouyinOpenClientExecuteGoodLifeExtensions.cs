@@ -558,7 +558,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
                 .SetQueryParam("account_id", request.AccountId)
                 .SetQueryParam("status", request.Status)
                 .SetQueryParam("cursor", request.PageCursor)
-                .SetQueryParam("count", request.PageSize);
+                .SetQueryParam("count", request.PageSize)
+                .SetQueryParam("goods_creator_type", request.GoodsCreatorType)
+                .SetQueryParam("goods_query_type", request.GoodsQueryType)
+                .SetQueryParam("query_all_poi", request.QueryAllPoi)
+                .SetQueryParam("product_name", request.ProductName)
+                .SetQueryParam("poi_ids", request.POIList is null ? null : string.Join(",", request.POIList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsProductOnlineQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
